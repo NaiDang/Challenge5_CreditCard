@@ -54,30 +54,26 @@ function confirmBtnClick(ev) {
     }
 
     // Check month field
-    if (month_field.value === '' || month_field.value <1) { 
+    const inputMonth = parseInt(month_field.value);
+    if (month_field.value === '' || isNaN(inputMonth) || inputMonth < 1 || inputMonth > 12) { 
         document.querySelector('.release-month-year-warn').style.display = 'initial';
         month_field.style.borderColor = 'hsl(0, 100%, 66%)';
     } else {
-        // Check if the month is valid
-        const inputMonth = parseInt(month_field.value);
-        if (isNaN(inputMonth) || inputMonth < 1 || inputMonth > 12) {
-            document.querySelector('.release-month-year-warn').style.display = 'initial';
-            month_field.style.borderColor = 'hsl(0, 100%, 66%)';
-        }
+        // If the month is valid, hide the warning
+        document.querySelector('.release-month-year-warn').style.display = 'none';
+        month_field.style.borderColor = '#6A5ACD';
     }
 
     // Check year field
-    if (year_field.value === '' || year_field.value <1) { 
+    const currentYear = new Date().getFullYear();
+    const inputYear = parseInt(year_field.value);
+    if (year_field.value === '' || isNaN(inputYear) || inputYear < currentYear) { 
         document.querySelector('.release-month-year-warn').style.display = 'initial';
         year_field.style.borderColor = 'hsl(0, 100%, 66%)';
     } else {
-        // Check if the year is valid
-        const currentYear = new Date().getFullYear();
-        const inputYear = parseInt(year_field.value);
-        if (isNaN(inputYear) || inputYear < currentYear) {
-            document.querySelector('.release-month-year-warn').style.display = 'initial';
-            year_field.style.borderColor = 'hsl(0, 100%, 66%)';
-        }
+        // If the year is valid, hide the warning
+        document.querySelector('.release-month-year-warn').style.display = 'none';
+        year_field.style.borderColor = '#6A5ACD';
     }
 
     // Check CVC field
