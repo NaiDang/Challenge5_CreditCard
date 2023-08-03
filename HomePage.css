@@ -75,6 +75,10 @@ body {
     width: 274px;
     color: #F5F5F5;
 }
+/* .card-text{
+    position: absolute;
+    padding: 122px 63px 13px 36px;
+} */
 
 .title {
     display: flex;
@@ -82,12 +86,9 @@ body {
     left: 36px;
     top: 165px;
     color: #F5F5F5;
+    width: 100%;
+    justify-content: space-between;
 }
-
-.holder-name {
-    width: 256px;
-}
-
 .card-front img {
     position: relative;
     width: 400px;
@@ -126,7 +127,6 @@ body {
 .form {
     width: 459px;
     margin-left: 370px;
-    margin-top: 132px;
 }
 
 .form form input {
@@ -412,5 +412,13 @@ button {
     }
     .release-month-year-warn {
         width: 100%;
+    }
+
+    .completion-message {
+        width: 320px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        display: inline-block;
     }
 }
