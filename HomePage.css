@@ -8,26 +8,28 @@ body {
 }
 
 .container {
-    width: 1099px;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url(./Images/Bg-Card.svg) no-repeat;
+    background-size: 36%;
 }
 
 .content {
     display: flex;
     flex-direction: row;
     align-items: center;
+   
 }
 
 .cards {
+
     background-size: cover;
     color: white;
     width: 430px;
-    height: 800px;
-    /* padding: 248px 0px 0px 160px; */
-    background-image: url(./Images/Bg-Card.svg);
+    height: 100vh;
+    
 }
 
 .card-front {
@@ -96,7 +98,7 @@ body {
 
 .card-back {
     position: relative;
-    margin: 24px 0px 0px 240px;
+    margin: 24px 0px 128px 240px;
 }
 
 .card-back img {
@@ -120,62 +122,32 @@ body {
     margin-bottom: 10px;
 }
 
-.card-date input {
-    width: 86px;
-    padding: 18px 0px;
-    text-align: center;
-    display: flex;
-    gap: 10px;
-}
-
-.date {
-    display: flex;
-    gap: 10px;
-}
 
 .form {
     width: 459px;
     margin-left: 370px;
     margin-top: 132px;
 }
-    /* background-image:linear-gradient(to right, #6A5ACD, #FF7F50);
-    padding: 10px;
-    border-radius: 20px; */
-    /* border-color: #6A5ACD;
-    outline: #FF7F50; */
+
 .form form input {
     background: #FFF;
     border-radius: 20px;
     box-sizing: border-box;
-    border: 1px solid transparent; 
-    border-radius: 20px;
-    border-color: #6A5ACD;
-    outline: #FF7F50;
+    border: 1px solid transparent;
+    outline: none;
     background-image: linear-gradient(white, white), linear-gradient(to right, #6A5ACD, #FF7F50);
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
-/* .input-wrapper input {
-    background: #FFF;
-    border-radius: 20px;
-    box-sizing: border-box;
-    border: 1px solid transparent;
-    padding: 8px;
-    background-image: linear-gradient(135deg, #6A5ACD, #FF7F50);
-    background-clip: border-box; 
-} */
-.name-field{
+
+.name-field {
     background-color: #FFF;
-  border-radius: inherit;
-}
-.input-wrapper input {
-    width: 100%;
-    padding: 19px 12px 19px 14px;
+    border-radius: inherit;
 }
 
-.date input {
-    width: 90px;
-    padding: 19px 27px;
+.input-wrapper input {
+    width: 100%;
+    height: 55px;
 }
 
 ::placeholder {
@@ -194,8 +166,22 @@ body {
 
 .name-field,
 .num-field {
-    padding: 18px 12px 18px 14px;
     color: #808080;
+}
+
+.date {
+    display: flex;
+    gap: 10px;
+}
+
+.date input {
+    width: 90px;
+    height: 55px;
+    text-align: center;
+}
+
+.input-wrapper input[type="text"] {
+    text-indent: 14px;
 }
 
 .date-cvc {
@@ -205,7 +191,8 @@ body {
 
 .cvc-field {
     width: 220px;
-    padding: 19px 12px;
+    height: 55px;
+    text-indent: 14px;
 }
 
 button {
@@ -222,6 +209,7 @@ button {
     line-height: normal;
     margin-top: 50px;
     cursor: pointer;
+    border: none;
 }
 
 .completion-message {
@@ -255,29 +243,32 @@ button {
 .card-date,
 .cvc {
     position: relative;
-    
+
 }
-.name-warn,.number-warn{
+
+.name-warn,
+.number-warn {
     display: none;
-    color: red; 
+    color: red;
     font-size: 12px;
-     position: absolute; 
+    position: absolute;
 }
-.release-month-year-warn{
+
+.release-month-year-warn {
     display: none;
     position: absolute;
-    bottom: -34px; 
     left: 0;
-    color: red; 
-    font-size: 12px; 
+    color: red;
+    font-size: 12px;
 }
+
 .cvc-warn {
     display: none;
     position: absolute;
-    bottom: -20px; 
+    bottom: -15px;
     left: 0;
-    color: red; 
-    font-size: 12px; 
+    color: red;
+    font-size: 12px;
 }
 
 
@@ -288,7 +279,9 @@ button {
     }
 
     .container {
-        width: 100%;
+        width: 400px;
+        height: 150px;
+        background-size: initial;
         display: block;
         padding: 0px 0px 98px 0px;
     }
@@ -307,7 +300,7 @@ button {
 
     .input-wrapper input {
         width: 100%;
-        padding: 12px 10px;
+        height: 41px;
     }
 
     .date-cvc {
@@ -317,7 +310,7 @@ button {
 
     .cvc-field {
         width: 160px;
-        padding: 13px 10px 11px 12px;
+        height: 41px;
     }
 
     .logo .logo-white,
@@ -391,13 +384,14 @@ button {
 
     .card-date input {
         width: 72px;
-        padding: 12px 0px;
+        height: 41px;
         border-radius: 10px;
     }
 
     button {
         padding: 14px;
         margin-top: 40px;
+        margin-bottom: 98px;
         background-color: #21092F;
     }
 
@@ -416,5 +410,7 @@ button {
         font-size: 16px;
         color: #FFF;
     }
+    .release-month-year-warn {
+        width: 100%;
+    }
 }
-
